@@ -1,10 +1,10 @@
 <?php
 include 'config.php';
-include 'class.browser.php';
+include 'class.movie.php';
 header('Content-Type: application/json');
-$browser = new browser();
-$list=$browser->get_browser();
-echo "{\"browser\":";
+$movie = new movie();
+$list=$movie->get_movie();
+echo "{\"movie\":";
 echo json_encode($list);
 echo "}";
 ?>
