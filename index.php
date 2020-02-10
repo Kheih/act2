@@ -2,28 +2,30 @@
 $json = file_get_contents("https://exercise2json.herokuapp.com/json.php");
 
 $data = json_decode($json,true);
-$list = $data['browser'];
+$list = $data['movie'];
 
 
 ?>
 
-<h1>Browsers </h1>
+<h1> Best Movies in 2019 </h1>
 
 <table border="1px">
     <tr>
-        <td>Browser Name</td>
-        <td>Creator</td>
-        <td>Published</td>
-        <td>Programming Language</td>
+        <td>Title</td>
+        <td>Director</td>
+        <td>Writer</td>
+        <td>Artist</td>
+        <td>Genre</td>
     </tr>
 <?php
 foreach($list as $value){
     ?>
     <tr>
-        <td><?php echo $value['browser'];?></td>
-        <td><?php echo $value['creator'];?></td>
-        <td><?php echo $value['publish'];?></td>
-        <td><?php echo $value['language'];?></td>
+        <td><?php echo $value['title'];?></td>
+        <td><?php echo $value['director'];?></td>
+        <td><?php echo $value['writer'];?></td>
+        <td><?php echo $value['artist'];?></td>
+        <td><?php echo $value['genre'];?></td>
     </tr>
 <?php
 }
