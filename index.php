@@ -20,11 +20,11 @@ $list = $data['movie'];
 foreach($list as $value){
     ?>
     <tr>
-        <td><?php echo $value['title'];?></td>
-        <td><?php echo $value['director'];?></td>
-        <td><?php echo $value['writer'];?></td>
-        <td><?php echo $value['artist'];?></td>
-        <td><?php echo $value['genre'];?></td>
+        <td><?php echo $value['mov_title'];?></td>
+        <td><?php echo $value['mov_director'];?></td>
+        <td><?php echo $value['mov_writer'];?></td>
+        <td><?php echo $value['mov_artist'];?></td>
+        <td><?php echo $value['mov_genre'];?></td>
     </tr>
 <?php
 }
