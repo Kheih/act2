@@ -13,7 +13,7 @@ class movie{
 	}
 	
 	public function get_movie(){
-		$sql = "SELECT * FROM tblmovie";
+		$sql = "SELECT * FROM tbl_movie";
 		$result = mysqli_query($this->database,$sql);
 		while($row = mysqli_fetch_assoc($result)){
 			$list[] = $row;
